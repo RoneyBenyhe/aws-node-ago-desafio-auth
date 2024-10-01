@@ -1,8 +1,8 @@
-import mysql2 from 'mysql2'
+import { createConnection } from 'mysql2/promise'
 
 async function conect() {
   try {
-    const conn = await mysql2.createConnection({
+    const conn = await createConnection({
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
